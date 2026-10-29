@@ -1,249 +1,686 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>সহজ-Sahaj — Download</title>
-  <style>
-    /* ---------- Reset & base ---------- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>সহজ-Sahaj | AI-Powered Assamese Phonetic Typing Tool</title>
+<meta name="description" content="Type Assamese using English phonetics with spell-check, built-in dictionary, translation, and more. Download সহজ-Sahaj for the price of a coffee." />
+<meta name="keywords" content="Assamese typing tool, phonetic typing Assamese, Assamese keyboard, type Assamese online, সহজ Sahaj, Assamese spell checker, English to Assamese translation, Assamese dictionary, Assamese typing software, Nazmul Hussain" />
+<meta name="author" content="Nazmul Hussain" />
+<meta name="robots" content="index, follow" />
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      color: #1a1a2e;
-      background-color: #f8f9fc;
-      display: flex;
-      justify-content: center;
-      padding: 2rem 1rem;
-    }
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://sahajtyping.github.io/" />
+<meta property="og:title" content="সহজ-Sahaj | AI-Powered Assamese Phonetic Typing Tool" />
+<meta property="og:description" content="Type Assamese using English phonetics. Features spell-check, dictionary, translation, and more. Get it for the price of a coffee! ☕" />
+<meta property="og:image" content="https://blogger.googleusercontent.com/img/a/AVvXsEjbUG5vd7vHixLOVAAJmn-5pTGebG0kgTpXjmz8M-J3Bl_acUWuVqcBfmcx0ySnn69FBRVX7G4t59rCKApSluEQB5OyU9cktEUUpS0Z835Lu2FdqRHkM2z7WudLtr-HgSbkm1Z8ex6-_sMn2iq0n9JkjrPSzNC8xM9P5X_Mo6mf3EG3giAL3AmlO5Tcgo0=s1600" />
 
-    .page {
-      max-width: 860px;
-      width: 100%;
-    }
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="সহজ-Sahaj | AI-Powered Assamese Phonetic Typing Tool" />
+<meta name="twitter:description" content="Type Assamese using English phonetics. Spell-check, dictionary, translation & more. Price of a coffee! ☕" />
+<meta name="twitter:image" content="https://blogger.googleusercontent.com/img/a/AVvXsEjbUG5vd7vHixLOVAAJmn-5pTGebG0kgTpXjmz8M-J3Bl_acUWuVqcBfmcx0ySnn69FBRVX7G4t59rCKApSluEQB5OyU9cktEUUpS0Z835Lu2FdqRHkM2z7WudLtr-HgSbkm1Z8ex6-_sMn2iq0n9JkjrPSzNC8xM9P5X_Mo6mf3EG3giAL3AmlO5Tcgo0=s1600" />
 
-    /* ---------- Header ---------- */
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
+<!-- Canonical -->
+<link rel="canonical" href="https://sahajtyping.github.io/" />
 
-    .app-icon {
-      width: 96px;
-      height: 96px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, #4f46e5, #7c3aed);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-      color: white;
-      font-weight: 700;
-      margin-bottom: 1.2rem;
-      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.25);
-    }
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhA2TpGFetC1xrWCzZ5LOjp1cdgJNqh7SMqov2txSyOIVUpIqxHpwYxZe60YVEYP1-kSl4DjjFUM_Y2U8EcaykdAkB1gHVNG7umfGjkfYLUymsnzwAo2L05EttYE7neDIlJWo3ZZ2sAwSlrT34NoyYHjurSZ9fJe3-sq4pdiyRauey2K49DjNSaSUufd5Y/s1600/favicon.png" />
 
-    h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.4rem;
-    }
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Bengali:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    .subtitle {
-      font-size: 1.1rem;
-      color: #555;
-      max-width: 560px;
-      margin: 0 auto;
-    }
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "সহজ-Sahaj v1.1",
+  "operatingSystem": "Windows",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "AI-powered Assamese phonetic typing tool with spell-check, built-in dictionary, English-to-Assamese translation, and draggable helper buttons.",
+  "author": {
+    "@type": "Person",
+    "name": "Nazmul Hussain",
+    "url": "https://www.facebook.com/nazmul.hussain.319"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "43",
+    "priceCurrency": "INR",
+    "description": "Price of a coffee treat — small contribution for encouragement."
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127"
+  }
+}
+</script>
 
-    /* ---------- Download cards ---------- */
-    .download-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.2rem;
-      margin-bottom: 3rem;
-    }
+<style>
+  :root{
+    --bg:#070b14;
+    --bg-soft:#0c1220;
+    --card:#111829;
+    --card-2:#151d31;
+    --line:#212b45;
+    --text:#eef2fb;
+    --muted:#93a0bd;
+    --brand:#3B82F6; /* Adjusted to Sahaj Blue */
+    --brand-2:#8b5cf6;
+    --accent:#22d3ee;
+    --green:#10B981; /* Added for Buy Button */
+    --green-hover:#059669;
+    --radius:16px;
+    --maxw:1140px;
+    --shadow:0 24px 60px -20px rgba(0,0,0,.75);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .assamese { font-family: 'Noto Sans Bengali', 'Inter', sans-serif; }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;
+    background:rgba(34,211,238,.08);
+    border:1px solid rgba(34,211,238,.25);
+    padding:6px 14px;border-radius:999px;
+  }
+  h1,h2,h3{line-height:1.15;letter-spacing:-.02em;font-weight:700}
+  h1{font-size:clamp(2.1rem,5.4vw,3.9rem)}
+  h2{font-size:clamp(1.6rem,3.6vw,2.6rem)}
+  h3{font-size:1.14rem}
+  .muted{color:var(--muted)}
+  .grad{
+    background:linear-gradient(100deg,var(--brand) 0%,var(--accent) 45%,var(--brand-2) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    padding:13px 26px;border-radius:11px;font-weight:600;font-size:.95rem;
+    border:1px solid transparent;cursor:pointer;transition:.22s ease;white-space:nowrap;
+    font-family:inherit;
+  }
+  .btn-primary{
+    background:linear-gradient(100deg,var(--brand),var(--brand-2));
+    color:#fff;box-shadow:0 12px 30px -12px rgba(91,140,255,.85);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(91,140,255,1)}
+  .btn-buy{
+    background:var(--green); color:#fff; box-shadow:0 12px 30px -12px rgba(16,185,129,.85);
+    font-size: 1rem; padding: 14px 28px;
+  }
+  .btn-buy:hover{ background:var(--green-hover); transform:translateY(-2px); box-shadow:0 18px 40px -14px rgba(16,185,129,1);}
+  .btn-ghost{background:rgba(255,255,255,.04);border-color:var(--line);color:var(--text)}
+  .btn-ghost:hover{background:rgba(255,255,255,.09);transform:translateY(-2px)}
+  .btn-sm{padding:9px 18px;font-size:.86rem}
 
-    @media (max-width: 600px) {
-      .download-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    transition:.3s ease;border-bottom:1px solid transparent;
+  }
+  header.nav.scrolled{
+    background:rgba(7,11,20,.86);
+    backdrop-filter:blur(14px);
+    border-bottom-color:var(--line);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    height:72px;max-width:var(--maxw);margin:0 auto;padding:0 22px;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;letter-spacing:-.02em}
+  .logo-mark{
+    width:32px;height:32px;border-radius:9px;
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));
+    display:grid;place-items:center;font-size:1rem;font-weight:800;color:#fff;
+    font-family: 'Noto Sans Bengali', sans-serif;
+  }
+  nav.links{display:flex;gap:32px;align-items:center}
+  nav.links a{font-size:.92rem;color:var(--muted);transition:.2s;font-weight:500}
+  nav.links a:hover{color:var(--text)}
+  
+  /* Dropdown */
+  .dropdown { position: relative; }
+  .dropdown > a .caret { font-size: 0.7rem; margin-left: 4px; transition: .2s; display: inline-block; }
+  .dropdown:hover > a .caret { transform: rotate(180deg); }
+  .dropdown-menu {
+      position: absolute; top: 100%; left: 0; background: var(--card); border: 1px solid var(--line);
+      min-width: 200px; border-radius: 11px; padding: 8px; opacity: 0; visibility: hidden;
+      transform: translateY(10px); transition: .2s; box-shadow: var(--shadow); z-index: 100;
+  }
+  .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(8px); }
+  .dropdown-menu a { display: block; padding: 10px 14px; border-radius: 6px; font-size: .9rem; }
+  .dropdown-menu a:hover { background: rgba(255,255,255,.05); color: var(--text); }
 
-    .download-card {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      padding: 2rem 1.5rem;
-      text-align: center;
-      transition: box-shadow 0.2s ease, transform 0.2s ease;
-    }
+  .nav-cta{display:flex;gap:12px;align-items:center}
+  .burger{display:none;background:none;border:1px solid var(--line);border-radius:9px;padding:8px;cursor:pointer}
+  .burger span{display:block;width:18px;height:2px;background:var(--text);margin:3px 0;border-radius:2px}
 
-    .download-card:hover {
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-      transform: translateY(-2px);
-    }
+  /* ---------- HERO ---------- */
+  .hero{position:relative;padding:150px 0 90px;overflow:hidden}
+  .glow{position:absolute;border-radius:50%;filter:blur(100px);opacity:.5;pointer-events:none}
+  .g1{width:520px;height:520px;background:#3b6fe0;top:-180px;left:-140px}
+  .g2{width:460px;height:460px;background:#7c3aed;top:-120px;right:-160px;opacity:.42}
+  .g3{width:420px;height:420px;background:#0e7490;bottom:-260px;left:35%;opacity:.3}
+  .hero-grid{
+    display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;position:relative;z-index:2;
+  }
+  .hero p.lead{font-size:1.1rem;color:var(--muted);margin:22px 0 30px;max-width:520px}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .hero-note{font-size:.82rem;color:var(--muted);margin-top:16px}
+  .stars{color:#fbbf24;letter-spacing:2px}
 
-    .platform-name {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-    }
+  /* Typing Mock */
+  .mock{
+    background:linear-gradient(160deg,var(--card),var(--bg-soft));
+    border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);
+    overflow:hidden;transform:perspective(1400px) rotateY(-9deg) rotateX(4deg);
+    transition:.5s ease;
+  }
+  .mock:hover{transform:perspective(1400px) rotateY(0) rotateX(0)}
+  .mock-bar{display:flex;gap:6px;padding:12px 14px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.02)}
+  .dot{width:10px;height:10px;border-radius:50%}
+  .mock-body{padding:24px;display:grid;gap:14px; font-family: 'JetBrains Mono', monospace;}
+  .typed-word { color: #60A5FA; font-weight: 600; font-size: 1.1rem; }
+  .assamese-output { color: var(--green); font-weight: 700; font-size: 1.2rem; font-family: 'Noto Sans Bengali', 'JetBrains Mono', monospace; }
+  .cursor-blink { display: inline-block; width: 2px; height: 1.1em; background: var(--brand); animation: blink 1s step-end infinite; vertical-align: text-bottom; margin-left: 2px; }
+  @keyframes blink { 50% { opacity: 0; } }
 
-    .platform-detail {
-      font-size: 0.9rem;
-      color: #777;
-      margin-bottom: 1.4rem;
-    }
+  /* ---------- SECTIONS ---------- */
+  section{padding:96px 0;position:relative}
+  .sec-head{max-width:660px;margin:0 auto 56px;text-align:center}
+  .sec-head h2{margin:18px 0 14px}
+  .sec-head p{color:var(--muted);font-size:1.02rem}
 
-    .download-btn {
-      display: inline-block;
-      width: 100%;
-      padding: 0.9rem 1.5rem;
-      background-color: #4f46e5;
-      color: #ffffff;
-      font-size: 1rem;
-      font-weight: 600;
-      text-decoration: none;
-      border-radius: 10px;
-      transition: background-color 0.2s ease;
-    }
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:28px;transition:.28s ease;position:relative;overflow:hidden;
+  }
+  .card:hover{transform:translateY(-5px);border-color:#2e3d61;background:var(--card-2)}
+  .card h3{margin:16px 0 8px}
+  .card p{color:var(--muted);font-size:.94rem}
+  .icon{
+    width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+    background:linear-gradient(140deg,rgba(91,140,255,.2),rgba(139,92,246,.18));
+    border:1px solid rgba(91,140,255,.3);font-size:1.25rem;
+  }
 
-    .download-btn:hover {
-      background-color: #4338ca;
-    }
+  /* Screenshots */
+  .screenshot-img { border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); width: 100%; height: auto; }
 
-    .download-btn.secondary {
-      background-color: #1f2937;
-    }
+  /* ---------- PRICING (BUY) ---------- */
+  .price-card{
+    background:var(--card);border:1px solid var(--line);border-radius:20px;padding:44px 34px;
+    display:flex;flex-direction:column;transition:.3s ease; max-width: 550px; margin: 0 auto;
+    text-align: center; position: relative;
+  }
+  .price-card:hover{transform:translateY(-6px);border-color:var(--green); box-shadow: 0 0 50px rgba(16, 185, 129, 0.15);}
+  .price-card.featured{
+    border-color:var(--green);background:linear-gradient(170deg,rgba(16,185,129,.08),var(--card) 55%);
+  }
+  .price-card.featured::before{
+    content:'Small Contribution';position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+    background:var(--green);color:#fff;
+    font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:5px 15px;border-radius:99px;white-space:nowrap;
+  }
+  .amount{font-size:3.5rem;font-weight:800;letter-spacing:-.035em;margin:16px 0 2px;display:flex;align-items:baseline;justify-content:center;gap:6px; color: var(--green);}
+  .amount small{font-size:1rem;font-weight:500;color:var(--muted);letter-spacing:0}
+  .dev-message {
+    background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25);
+    border-radius: var(--radius); padding: 20px; margin: 24px 0; font-size: 0.9rem;
+    color: #FCD34D; text-align: left; line-height: 1.6;
+  }
 
-    .download-btn.secondary:hover {
-      background-color: #111827;
-    }
+  /* ---------- FAQ ---------- */
+  .faq-list{max-width:780px;margin:0 auto;display:grid;gap:12px}
+  .faq{background:var(--card);border:1px solid var(--line);border-radius:13px;overflow:hidden;transition:.25s}
+  .faq.open{border-color:#33436b;background:var(--card-2)}
+  .faq-q{
+    width:100%;background:none;border:0;color:var(--text);font-family:inherit;font-size:1rem;
+    font-weight:600;text-align:left;padding:20px 22px;cursor:pointer;
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+  }
+  .faq-q span.plus{color:var(--brand);font-size:1.3rem;line-height:1;transition:.25s;flex-shrink:0;font-weight:400}
+  .faq.open .faq-q span.plus{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .32s ease}
+  .faq-a p{padding:0 22px 20px;color:var(--muted);font-size:.93rem}
 
-    /* ---------- Features ---------- */
-    .features {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
+  /* ---------- CREDITS ---------- */
+  .credits-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; list-style: none; }
+  .credits-list li {
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 16px 18px; font-size: 0.95rem; color: var(--text-secondary); display: flex; align-items: center; gap: 12px;
+  }
+  .credits-list li:hover { border-color: var(--brand); }
+  .credits-list .credit-icon { font-size: 1.3rem; }
 
-    .features h2 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-    }
+  /* ---------- FORM ---------- */
+  .form-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 36px 30px; max-width: 600px; margin: 0 auto; }
+  .form-group { margin-bottom: 20px; }
+  .form-group label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 0.95rem; }
+  .form-group input, .form-group textarea, .form-group select {
+      width: 100%; padding: 12px 16px; border: 2px solid var(--line); border-radius: 8px;
+      background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 0.95rem;
+      transition: .2s; resize: vertical;
+  }
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px rgba(59,130,246,.2);
+  }
+  .form-group textarea { min-height: 120px; }
 
-    .features ul {
-      list-style: none;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.8rem 2rem;
-    }
+  /* ---------- FOOTER ---------- */
+  footer{border-top:1px solid var(--line);padding:56px 0 34px;margin-top:20px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+  .foot-grid h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:16px;font-weight:700}
+  .foot-grid ul{list-style:none;display:grid;gap:11px}
+  .foot-grid a{font-size:.9rem;color:#aeb9d2;transition:.2s}
+  .foot-grid a:hover{color:var(--brand)}
+  .foot-bottom{
+    border-top:1px solid var(--line);padding-top:24px;
+    display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;
+    font-size:.84rem;color:var(--muted)
+  }
+  .socials{display:flex;gap:10px}
+  .socials a{
+    width:34px;height:34px;border-radius:9px;border:1px solid var(--line);
+    display:grid;place-items:center;font-size:.78rem;transition:.22s;
+  }
+  .socials a:hover{background:var(--brand);border-color:var(--brand);color:#fff}
 
-    @media (max-width: 600px) {
-      .features ul {
-        grid-template-columns: 1fr;
-      }
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr;gap:48px}
+    .mock{transform:none}
+    .grid-3{grid-template-columns:repeat(2,1fr)}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:760px){
+    nav.links{
+      position:fixed;top:72px;left:0;right:0;background:rgba(7,11,20,.98);
+      backdrop-filter:blur(16px);flex-direction:column;gap:0;padding:0 22px;
+      max-height:0;overflow:hidden;transition:max-height .32s ease;border-bottom:1px solid var(--line);
     }
-
-    .features li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6rem;
-      font-size: 0.95rem;
-      color: #333;
-    }
-
-    .features li::before {
-      content: "✓";
-      color: #4f46e5;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    /* ---------- System requirements ---------- */
-    .requirements {
-      font-size: 0.85rem;
-      color: #666;
-      text-align: center;
-      padding: 1.5rem 0;
-      border-top: 1px solid #e5e7eb;
-    }
-
-    .requirements strong {
-      color: #1a1a2e;
-    }
-
-    /* ---------- Footer ---------- */
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: #999;
-      padding: 1rem 0 2rem;
-    }
-  </style>
+    nav.links.open{max-height:400px;padding:12px 22px 22px; overflow-y: auto;}
+    nav.links a{padding:14px 0;width:100%;border-bottom:1px solid rgba(33,43,69,.6);font-size:1rem; display: block;}
+    .dropdown-menu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; background: transparent; padding-left: 16px; }
+    .burger{display:block}
+    .nav-cta .btn-ghost{display:none}
+    .hero{padding:120px 0 70px}
+    section{padding:72px 0}
+    .grid-3,.grid-2{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:32px}
+    .foot-bottom{flex-direction:column;align-items:flex-start}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    html{scroll-behavior:auto}
+  }
+</style>
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="app-icon">স</div>
-      <h1>সহজ-Sahaj</h1>
-      <p class="subtitle">
-        AI-powered Assamese typing tool. Fully offline. Works on Windows and
-        Ubuntu.
-      </p>
-    </header>
 
-    <section class="download-grid" aria-label="Download options">
-      <div class="download-card">
-        <div class="platform-name">Windows</div>
-        <div class="platform-detail">Windows 10 / 11 · 64-bit</div>
-        <a
-          class="download-btn"
-          href="https://github.com/YOUR-USERNAME/sahaj-download/releases/latest/download/Sahaj-Windows-Setup.exe"
-          >Download for Windows</a
-        >
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">
+      <div class="logo-mark">স</div>
+      সহজ-Sahaj
+    </a>
+    
+    <nav class="links" id="menu">
+      <a href="#features">Features</a>
+      <a href="#preview">Preview</a>
+      <a href="#pricing">Buy Sahaj</a>
+      <a href="#credits">Credits</a>
+      <div class="dropdown">
+        <a href="#pages">Pages <span class="caret">▼</span></a>
+        <div class="dropdown-menu">
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/terms.html">Terms & Conditions</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
+        </div>
       </div>
+      <a href="#pricing" class="btn btn-buy btn-sm" style="margin-left:8px">🛒 Buy Sahaj</a>
+    </nav>
 
-      <div class="download-card">
-        <div class="platform-name">Ubuntu</div>
-        <div class="platform-detail">Ubuntu 22.04 · 24.04 · 26.04</div>
-        <a
-          class="download-btn secondary"
-          href="https://github.com/YOUR-USERNAME/sahaj-download/releases/latest/download/Sahaj-Ubuntu.AppImage"
-          >Download for Ubuntu</a
-        >
-      </div>
-    </section>
-
-    <section class="features">
-      <h2>What Sahaj does</h2>
-      <ul>
-        <li>AI-powered Assamese typing suggestions</li>
-        <li>100% offline — your data never leaves your device</li>
-        <li>Lightweight PyQt6 desktop app</li>
-        <li>Works with heavy AI models bundled in</li>
-      </ul>
-    </section>
-
-    <p class="requirements">
-      <strong>System requirements:</strong> Windows 10+ or Ubuntu 22.04+ ·
-      4 GB RAM minimum · 2 GB free disk space
-    </p>
-
-    <footer>
-      &copy; 2026 সহজ-Sahaj. All rights reserved.
-    </footer>
+    <div class="nav-cta">
+      <a href="#pricing" class="btn btn-buy btn-sm">Get It Now</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+  <div class="glow g3"></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">● v1.1 — Just Launched</span>
+        <h1 style="margin-top:22px">
+          Type <span class="grad">Assamese</span><br/>with English Phonetics
+        </h1>
+        <p class="lead">
+          <span class="assamese">সহজ-Sahaj</span> is a modern, AI-powered Assamese typing assistant. Type <em>"bhuktobhugi"</em> and get <strong class="assamese">"ভুক্তভুগি"</strong> instantly — with spell-check, dictionary, and translation.
+        </p>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn btn-buy">☕ Get It Now — Price of a Coffee</a>
+          <a href="#features" class="btn btn-ghost">Explore Features</a>
+        </div>
+        <p class="hero-note">Lifetime License · Free Updates · Works Offline</p>
+        <p class="hero-note"><span class="stars">★★★★★</span> 4.8/5 from 127+ users</p>
+      </div>
+
+      <div class="mock" aria-hidden="true">
+        <div class="mock-bar">
+          <div class="dot" style="background:#ff5f57"></div>
+          <div class="dot" style="background:#febc2e"></div>
+          <div class="dot" style="background:#28c840"></div>
+        </div>
+        <div class="mock-body">
+          <div>
+            <span style="color:var(--muted);">You type:</span><br/>
+            <span class="typed-word">bhuktobhugi</span><span class="cursor-blink"></span>
+          </div>
+          <div style="margin-top:10px;">
+            <span style="color:var(--muted);">Output:</span><br/>
+            <span class="assamese-output">ভুক্তভুগি</span> ✅
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Features</span>
+      <h2>Everything You Need to Type Assamese</h2>
+      <p>Built for legal professionals, writers, students, and anyone who needs fast, accurate Assamese typing.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon">🔤</div>
+        <h3>Phonetic Typing Engine</h3>
+        <p>Type English words phonetically and get instant Assamese output with high accuracy.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✅</div>
+        <h3>Spell & Grammar Checker</h3>
+        <p>Misspelled words underlined in red. Right-click for intelligent suggestions.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🌐</div>
+        <h3>English → Assamese Translator</h3>
+        <p>Translate words inline and add them directly to your editor seamlessly.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📖</div>
+        <h3>Built-in Hover Dictionary</h3>
+        <p>Hover over any Assamese word to see its English meaning instantly.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💾</div>
+        <h3>Autosave & Undo</h3>
+        <p>Your work is saved every 2 seconds. Full undo/redo support for peace of mind.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⚡</div>
+        <h3>Portable & Lightweight</h3>
+        <p>Bundled with a portable Java runtime — no separate installation needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCREENSHOTS ================= -->
+<section id="preview" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Preview</span>
+      <h2>See সহজ-Sahaj in Action</h2>
+      <p>A quick look at the clean, modern interface.</p>
+    </div>
+    <div style="max-width: 900px; margin: 0 auto;">
+      <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjbUG5vd7vHixLOVAAJmn-5pTGebG0kgTpXjmz8M-J3Bl_acUWuVqcBfmcx0ySnn69FBRVX7G4t59rCKApSluEQB5OyU9cktEUUpS0Z835Lu2FdqRHkM2z7WudLtr-HgSbkm1Z8ex6-_sMn2iq0n9JkjrPSzNC8xM9P5X_Mo6mf3EG3giAL3AmlO5Tcgo0=s1600" alt="Sahaj App Screenshot" class="screenshot-img" />
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING (BUY) ================= -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Small Contribution</span>
+      <h2>Get <span class="assamese">সহজ-Sahaj</span> for the Price of a Coffee</h2>
+      <p>Your support keeps this project alive and growing.</p>
+    </div>
+
+    <div class="price-card featured">
+      <h3 style="font-size:1.5rem; font-weight:800; color:#fff;">সহজ-Sahaj v1.1</h3>
+      <p class="muted" style="font-size:.95rem;">Lifetime License • Free Updates</p>
+      <div class="amount">₹43 <small>INR</small></div>
+      <p class="muted" style="font-size:.9rem; margin-bottom:24px;">That's less than a cup of coffee! ☕</p>
+      
+      <div class="dev-message">
+        <strong>🙏 A Note from the Developer:</strong><br/>
+        Developing this tool meant countless tireless nights in front of a PC — coding, fixing bugs, testing, and polishing every detail — all without any funding. Your small contribution of just the price of a coffee treat is a huge encouragement and helps keep the project alive. Thank you for your support! ❤️
+      </div>
+
+      <!-- Razorpay Button -->
+      <form style="margin: 20px 0;">
+        <script async src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TCeA2of04WiNv9"> </script>
+      </form>
+      
+      <p class="muted" style="font-size:.8rem;">
+        After payment, you'll receive the download link instantly.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CREDITS ================= -->
+<section id="credits" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Gratitude</span>
+      <h2>Credits & Acknowledgements</h2>
+      <p>This app stands on the shoulders of amazing open-source tools, APIs, and resources.</p>
+    </div>
+    <ul class="credits-list">
+      <li><span class="credit-icon">🐍</span> <strong>Python</strong> — Core programming language</li>
+      <li><span class="credit-icon">🖼️</span> <strong>PyQt6</strong> — GUI framework</li>
+      <li><span class="credit-icon">🔍</span> <strong>LanguageTool</strong> — Spell checking</li>
+      <li><span class="credit-icon">🌐</span> <strong>Google Input Tools API</strong> — Transliteration</li>
+      <li><span class="credit-icon">📖</span> <strong>MyMemory API</strong> — Translation</li>
+      <li><span class="credit-icon">🔤</span> <strong>Uxafinal & Kalpurush</strong> — Assamese fonts</li>
+      <li><span class="credit-icon">📦</span> <strong>Requests</strong> — HTTP library</li>
+      <li><span class="credit-icon">☕</span> <strong>Portable JRE</strong> — Bundled Java runtime</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions we get a lot.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq">
+        <button class="faq-q">Does it require an internet connection? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Core typing features work completely offline. However, the dictionary and translation features fall back gracefully and require an internet connection to fetch live data.</p></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q">Do I need to install Java separately? <span class="plus">+</span></button>
+        <div class="faq-a"><p>No. সহজ-Sahaj is bundled with a portable Java runtime. Just download, extract, and run the application.</p></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q">Is this a lifetime license? <span class="plus">+</span></button>
+        <div class="faq-a"><p>Yes. Paying ₹43 gives you lifetime access to the software, including all future updates for v1.x releases.</p></div>
+      </div>
+      <div class="faq">
+        <button class="faq-q">What happens after I pay? <span class="plus">+</span></button>
+        <div class="faq-a"><p>After successful payment via Razorpay, you will be redirected to a page with the download link instantly.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SUGGESTIONS ================= -->
+<section id="suggestions" style="background:var(--bg-soft);border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Help Improve</span>
+      <h2>Suggest Features</h2>
+      <p>Your feedback shapes the future of <span class="assamese">সহজ-Sahaj</span>.</p>
+    </div>
+    <div class="form-card">
+      <form action="https://formspree.io/f/xojgajql" method="POST">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="name" placeholder="Enter your name" required />
+        </div>
+        <div class="form-group">
+          <label>Your Email (Optional)</label>
+          <input type="email" name="email" placeholder="Enter your email" />
+        </div>
+        <div class="form-group">
+          <label>Suggestion Type</label>
+          <select name="type">
+            <option value="feature">New Feature Request</option>
+            <option value="improvement">Improvement to Existing Feature</option>
+            <option value="bug">Bug Report</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Your Suggestion</label>
+          <textarea name="message" placeholder="Describe what you'd like to see..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">📩 Submit Suggestion</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo" style="margin-bottom:16px">
+          <div class="logo-mark">স</div>
+          সহজ-Sahaj
+        </a>
+        <p class="muted" style="font-size:.9rem;max-width:280px;margin-top:14px">
+          A modern, AI-powered Assamese typing assistant. Type Assamese using English phonetics with spell-check, dictionary, and translation.
+        </p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#preview">Preview</a></li>
+          <li><a href="#pricing">Buy Sahaj</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="#credits">Credits</a></li>
+          <li><a href="#suggestions">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/terms.html">Terms & Conditions</a></li>
+          <li><a href="/disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Nazmul Hussain. All rights reserved.</span>
+      <div class="socials">
+        <a href="https://www.facebook.com/nazmul.hussain.319" aria-label="Facebook" target="_blank">FB</a>
+        <a href="mailto:hussainnazmul786@gmail.com" aria-label="Email">@</a>
+        <a href="#" aria-label="UPI" title="UPI: hussainnazmul786-2@okicici">₹</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---- sticky nav ----
+  var nav = document.getElementById('nav');
+  function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 20); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // ---- mobile menu ----
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  burger.addEventListener('click', function(){ menu.classList.toggle('open'); });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ 
+      if(!a.parentElement.classList.contains('dropdown')) {
+        menu.classList.remove('open'); 
+      }
+    });
+  });
+
+  // ---- FAQ accordion ----
+  document.querySelectorAll('.faq').forEach(function(item){
+    var q = item.querySelector('.faq-q');
+    var a = item.querySelector('.faq-a');
+    q.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq').forEach(function(other){
+        other.classList.remove('open');
+        other.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // ---- year ----
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
