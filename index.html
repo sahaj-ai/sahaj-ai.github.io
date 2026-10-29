@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>সহজ-Sahaj — Download</title>
+  <style>
+    /* ---------- Reset & base ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #1a1a2e;
+      background-color: #f8f9fc;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .page {
+      max-width: 860px;
+      width: 100%;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .app-icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: white;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 8px 24px rgba(79, 70, 229, 0.25);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ---------- Download cards ---------- */
+    .download-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      .download-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .download-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .download-card:hover {
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .platform-name {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .platform-detail {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 1.4rem;
+    }
+
+    .download-btn {
+      display: inline-block;
+      width: 100%;
+      padding: 0.9rem 1.5rem;
+      background-color: #4f46e5;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background-color 0.2s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #4338ca;
+    }
+
+    .download-btn.secondary {
+      background-color: #1f2937;
+    }
+
+    .download-btn.secondary:hover {
+      background-color: #111827;
+    }
+
+    /* ---------- Features ---------- */
+    .features {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .features h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .features ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .features ul {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .features li::before {
+      content: "✓";
+      color: #4f46e5;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ---------- System requirements ---------- */
+    .requirements {
+      font-size: 0.85rem;
+      color: #666;
+      text-align: center;
+      padding: 1.5rem 0;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .requirements strong {
+      color: #1a1a2e;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #999;
+      padding: 1rem 0 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="app-icon">স</div>
+      <h1>সহজ-Sahaj</h1>
+      <p class="subtitle">
+        AI-powered Assamese typing tool. Fully offline. Works on Windows and
+        Ubuntu.
+      </p>
+    </header>
+
+    <section class="download-grid" aria-label="Download options">
+      <div class="download-card">
+        <div class="platform-name">Windows</div>
+        <div class="platform-detail">Windows 10 / 11 · 64-bit</div>
+        <a
+          class="download-btn"
+          href="https://github.com/YOUR-USERNAME/sahaj-download/releases/latest/download/Sahaj-Windows-Setup.exe"
+          >Download for Windows</a
+        >
+      </div>
+
+      <div class="download-card">
+        <div class="platform-name">Ubuntu</div>
+        <div class="platform-detail">Ubuntu 22.04 · 24.04 · 26.04</div>
+        <a
+          class="download-btn secondary"
+          href="https://github.com/YOUR-USERNAME/sahaj-download/releases/latest/download/Sahaj-Ubuntu.AppImage"
+          >Download for Ubuntu</a
+        >
+      </div>
+    </section>
+
+    <section class="features">
+      <h2>What Sahaj does</h2>
+      <ul>
+        <li>AI-powered Assamese typing suggestions</li>
+        <li>100% offline — your data never leaves your device</li>
+        <li>Lightweight PyQt6 desktop app</li>
+        <li>Works with heavy AI models bundled in</li>
+      </ul>
+    </section>
+
+    <p class="requirements">
+      <strong>System requirements:</strong> Windows 10+ or Ubuntu 22.04+ ·
+      4 GB RAM minimum · 2 GB free disk space
+    </p>
+
+    <footer>
+      &copy; 2026 সহজ-Sahaj. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
