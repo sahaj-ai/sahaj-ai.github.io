@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact | সহজ-Sahaj</title>
+<meta name="description" content="Get in touch about সহজ-Sahaj — questions, bug reports, feature ideas, or license help. I read every message personally." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://sahaj-ai.github.io/contact.html" />
+<link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhA2TpGFetC1xrWCzZ5LOjp1cdgJNqh7SMqov2txSyOIVUpIqxHpwYxZe60YVEYP1-kSl4DjjFUM_Y2U8EcaykdAkB1gHVNG7umfGjkfYLUymsnzwAo2L05EttYE7neDIlJWo3ZZ2sAwSlrT34NoyYHjurSZ9fJe3-sq4pdiyRauey2K49DjNSaSUufd5Y/s1600/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#070b14;--bg-soft:#0c1220;--card:#111829;--card-2:#151d31;--line:#212b45;
+    --text:#eef2fb;--muted:#93a0bd;--brand:#3B82F6;--brand-2:#8b5cf6;--accent:#22d3ee;
+    --pink:#ec4899;--green:#10B981;--green-hover:#059669;
+    --radius:16px;--maxw:1140px;--shadow:0 24px 60px -20px rgba(0,0,0,.75);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px}
+  body{background:var(--bg);color:var(--text);font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .assamese{font-family:'Noto Sans Bengali','Inter',sans-serif}
+  a{color:#93c5fd;text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 26px;border-radius:11px;font-weight:600;font-size:.95rem;border:1px solid transparent;cursor:pointer;transition:.22s ease;white-space:nowrap;font-family:inherit}
+  .btn-primary{background:linear-gradient(100deg,var(--brand),var(--brand-2));color:#fff;box-shadow:0 12px 30px -12px rgba(91,140,255,.85)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(91,140,255,1);text-decoration:none;color:#fff}
+  .btn-primary:disabled{opacity:.65;cursor:not-allowed;transform:none;box-shadow:none}
+  .btn-buy{background:var(--green);color:#fff;box-shadow:0 12px 30px -12px rgba(16,185,129,.85);font-size:1rem;padding:14px 28px}
+  .btn-buy:hover{background:var(--green-hover);transform:translateY(-2px);text-decoration:none}
+  .btn-ghost{background:rgba(255,255,255,.04);border-color:var(--line);color:var(--text)}
+  .btn-ghost:hover{background:rgba(255,255,255,.09);transform:translateY(-2px);text-decoration:none}
+  .btn-sm{padding:9px 18px;font-size:.86rem}
+
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:.3s ease;border-bottom:1px solid transparent;background:rgba(7,11,20,.86);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;letter-spacing:-.02em;color:var(--text);text-decoration:none}
+  .logo-mark{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;font-size:1rem;font-weight:800;color:#fff;font-family:'Noto Sans Bengali',sans-serif}
+  nav.links{display:flex;gap:32px;align-items:center}
+  nav.links a{font-size:.92rem;color:var(--muted);transition:.2s;font-weight:500;text-decoration:none}
+  nav.links a:hover{color:var(--text)}
+  .nav-cta{display:flex;gap:12px;align-items:center}
+  .burger{display:none;background:none;border:1px solid var(--line);border-radius:9px;padding:8px;cursor:pointer}
+  .burger span{display:block;width:18px;height:2px;background:var(--text);margin:3px 0;border-radius:2px}
+
+  .article-hero{padding:140px 0 40px;position:relative;overflow:hidden}
+  .glow{position:absolute;border-radius:50%;filter:blur(100px);opacity:.4;pointer-events:none}
+  .g1{width:520px;height:520px;background:#3b6fe0;top:-180px;left:-140px}
+  .g2{width:460px;height:460px;background:#7c3aed;top:-120px;right:-160px;opacity:.35}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600;background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.25);padding:6px 14px;border-radius:999px;position:relative;z-index:2}
+  h1{font-size:clamp(2rem,4.4vw,3rem);line-height:1.15;letter-spacing:-.02em;font-weight:700;margin:22px 0 14px;position:relative;z-index:2}
+  .article-hero p.lead{font-size:1.08rem;color:var(--muted);max-width:720px;position:relative;z-index:2}
+  .hero-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;position:relative;z-index:2}
+  .chip{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:500;padding:5px 12px;border-radius:99px;background:rgba(16,185,129,.10);border:1px solid rgba(16,185,129,.3);color:#a7f3d0}
+
+  /* Contact layout */
+  .contact-body{padding:20px 0 96px}
+  .contact-body .container{max-width:1000px;margin:0 auto;padding:0 22px}
+  .contact-layout{display:grid;grid-template-columns:1.45fr 1fr;gap:32px;align-items:start;margin-top:8px}
+
+  /* Form card */
+  .contact-form-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:36px 32px;box-shadow:var(--shadow)}
+  .contact-form-card h2{font-size:1.3rem;font-weight:700;margin:0 0 6px;color:var(--text);letter-spacing:-.01em}
+  .contact-form-card > p.form-intro{color:var(--muted);font-size:.93rem;margin:0 0 24px}
+
+  .form-group{margin-bottom:20px}
+  .form-group label{display:block;font-weight:600;margin-bottom:8px;font-size:.92rem;color:var(--text)}
+  .form-group .req{color:#f87171;font-weight:600;margin-left:2px}
+  .form-group .opt{color:var(--muted);font-weight:400;font-size:.82rem;margin-left:4px}
+  .form-group input,
+  .form-group textarea,
+  .form-group select{
+    width:100%;padding:12px 16px;border:2px solid var(--line);border-radius:8px;
+    background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-size:.95rem;
+    transition:.2s;resize:vertical;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus{
+    outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(59,130,246,.2);
+  }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder{color:#4a5872}
+  .form-group textarea{min-height:160px}
+  .form-group select{cursor:pointer}
+  .form-group select option{background:var(--bg);color:var(--text)}
+
+  .form-footnote{margin-top:14px;font-size:.82rem;color:var(--muted);text-align:center;line-height:1.55}
+
+  /* Success state */
+  .form-success{text-align:center;padding:40px 20px;animation:fadeIn .4s ease}
+  .form-success .tick{font-size:3rem;display:block;margin-bottom:14px;line-height:1}
+  .form-success h3{color:#6ee7b7;font-size:1.2rem;margin:0 0 8px;font-weight:700}
+  .form-success p{color:var(--muted);font-size:.95rem;margin:0}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+  /* Info column */
+  .info-column{display:grid;gap:16px}
+  .info-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:.22s ease}
+  .info-card:hover{border-color:#33436b;background:var(--card-2)}
+  .info-card h3{font-size:1.02rem;font-weight:700;margin:0 0 12px;color:var(--text);display:flex;align-items:center;gap:8px}
+  .info-card h3 .em{font-size:1.15rem;line-height:1}
+  .info-card p{color:var(--muted);font-size:.9rem;margin:0 0 10px;line-height:1.6}
+  .info-card p:last-child{margin-bottom:0}
+  .info-card a{color:#93c5fd;word-break:break-word}
+  .info-card a:hover{text-decoration:underline}
+  .info-card ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+  .info-card ul li{color:var(--muted);font-size:.9rem;display:flex;gap:8px;align-items:flex-start;line-height:1.55}
+  .info-card ul li::before{content:'·';color:var(--brand);font-weight:800;flex-shrink:0;font-size:1.2rem;line-height:1}
+
+  /* Help topics */
+  .help-topics{margin-top:44px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 32px}
+  .help-topics h2{font-size:1.15rem;font-weight:700;margin:0 0 6px;color:var(--text)}
+  .help-topics > p{color:var(--muted);font-size:.9rem;margin:0 0 18px}
+  .topic-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .topic-item{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:#c9d3e8;line-height:1.55}
+  .topic-item .t-icon{font-size:1.05rem;flex-shrink:0;line-height:1.4}
+  .topic-item strong{color:var(--text);font-weight:600}
+
+  /* Footer */
+  footer{border-top:1px solid var(--line);padding:56px 0 34px;margin-top:20px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+  .foot-grid h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);margin-bottom:16px;font-weight:700}
+  .foot-grid ul{list-style:none;display:grid;gap:11px;margin:0;padding:0}
+  .foot-grid a{font-size:.9rem;color:#aeb9d2;transition:.2s;text-decoration:none}
+  .foot-grid a:hover{color:var(--brand);text-decoration:none}
+  .foot-grid p{font-size:.9rem;color:var(--muted);margin-top:14px;max-width:280px}
+  .foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:.84rem;color:var(--muted)}
+  .socials{display:flex;gap:10px}
+  .socials a{width:34px;height:34px;border-radius:9px;border:1px solid var(--line);display:grid;place-items:center;font-size:.78rem;transition:.22s;color:inherit;text-decoration:none}
+  .socials a:hover{background:var(--brand);border-color:var(--brand);color:#fff;text-decoration:none}
+
+  @media (max-width:960px){
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .contact-layout{grid-template-columns:1fr}
+  }
+  @media (max-width:760px){
+    nav.links{position:fixed;top:72px;left:0;right:0;background:rgba(7,11,20,.98);backdrop-filter:blur(16px);flex-direction:column;gap:0;padding:0 22px;max-height:0;overflow:hidden;transition:max-height .32s ease;border-bottom:1px solid var(--line)}
+    nav.links.open{max-height:400px;padding:12px 22px 22px;overflow-y:auto}
+    nav.links a{padding:14px 0;width:100%;border-bottom:1px solid rgba(33,43,69,.6);font-size:1rem;display:block}
+    .burger{display:block}
+    .nav-cta .btn-ghost{display:none}
+    .article-hero{padding:110px 0 30px}
+    .contact-form-card{padding:28px 22px}
+    .topic-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:32px}
+    .foot-bottom{flex-direction:column;align-items:flex-start}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo"><div class="logo-mark">স</div>সহজ-Sahaj</a>
+    <nav class="links" id="menu">
+      <a href="/#ways">4 Ways to Type</a>
+      <a href="/#features">Features</a>
+      <a href="/#voice">Voice AI</a>
+      <a href="/#preview">Preview</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="disclaimer.html">Legal</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="/#pricing" class="btn btn-buy btn-sm">Get It Now</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="article-hero">
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h1>Say hello, ask a question,<br/>or tell me what's broken.</h1>
+    <p class="lead">
+      A bug you noticed, a feature you wish Sahaj had, a help with license activation, or
+      just a note to say hi — it all comes to the same inbox. I read every message
+      personally and reply as quickly as I can.
+    </p>
+    <div class="hero-chips">
+      <span class="chip">💬 Replies within 1–2 days</span>
+      <span class="chip">👤 Read by me, not a bot</span>
+      <span class="chip">🙏 Every message appreciated</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact-body">
+  <div class="container">
+
+    <div class="contact-layout">
+
+      <!-- FORM -->
+      <div class="contact-form-card">
+        <h2>Send me a message</h2>
+        <p class="form-intro">Fill this in and I'll get back to you by email.</p>
+
+        <form id="contactForm" action="https://formspree.io/f/meaaraop" method="POST" novalidate>
+          <!-- Formspree hidden fields -->
+          <input type="hidden" name="_subject" value="New message from সহজ-Sahaj website" />
+          <!-- Spam honeypot — invisible to humans, tempting to bots -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="form-group">
+            <label for="name">Your Name <span class="opt">(optional)</span></label>
+            <input type="text" id="name" name="name" placeholder="e.g. Priya Sharma" autocomplete="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="topic">What's this about?</label>
+            <select id="topic" name="topic">
+              <option value="general">General question</option>
+              <option value="bug">Something isn't working (bug report)</option>
+              <option value="feature">Feature idea / suggestion</option>
+              <option value="license">License or activation issue</option>
+              <option value="refund">Refund request</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message <span class="req">*</span></label>
+            <textarea id="message" name="message" placeholder="Tell me what's on your mind. The more context you can share, the easier it is for me to help — for example, what you were doing, what you expected, and what happened instead." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;font-size:1rem;padding:16px 28px;">📩 Send Message</button>
+
+          <p class="form-footnote">
+            I'll usually reply within 1–2 days. If it's urgent, you can also email me
+            directly at <a href="mailto:hussainnazmul786@gmail.com">hussainnazmul786@gmail.com</a>.
+          </p>
+        </form>
+      </div>
+
+      <!-- INFO COLUMN -->
+      <aside class="info-column">
+
+        <div class="info-card">
+          <h3><span class="em">📧</span> Email me directly</h3>
+          <p>Prefer email? You can reach me here and skip the form entirely:</p>
+          <p><a href="mailto:hussainnazmul786@gmail.com">hussainnazmul786@gmail.com</a></p>
+        </div>
+
+        <div class="info-card">
+          <h3><span class="em">💬</span> Message me on Facebook</h3>
+          <p>For quick questions, this often works faster:</p>
+          <p><a href="https://www.facebook.com/nazmul.hussain.319" target="_blank" rel="noopener">facebook.com/nazmul.hussain.319</a></p>
+        </div>
+
+        <div class="info-card">
+          <h3><span class="em">🕐</span> What to expect</h3>
+          <ul>
+            <li>Most messages are answered within a day or two</li>
+            <li>Bug reports with steps to reproduce get priority</li>
+            <li>Refund requests should be within 7 days of purchase</li>
+            <li>I read every email myself — no bot, no auto-reply</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3><span class="em">💡</span> Before you write</h3>
+          <p>
+            If Sahaj isn't working, please don't uninstall or ask for a refund right away — reach
+            out first. Most issues turn out to be something I can fix quickly once I understand
+            what happened.
+          </p>
+        </div>
+
+      </aside>
+
+    </div>
+
+    <!-- WHAT I CAN HELP WITH -->
+    <div class="help-topics">
+      <h2>What I can help with</h2>
+      <p>A quick guide to what I usually help users with, so you know what kind of message to send:</p>
+      <div class="topic-grid">
+        <div class="topic-item">
+          <span class="t-icon">🐛</span>
+          <div><strong>Bug reports</strong> — something crashed, features misbehaving, spell check acting odd. Include what you were doing when it happened.</div>
+        </div>
+        <div class="topic-item">
+          <span class="t-icon">🔑</span>
+          <div><strong>License issues</strong> — activation failing, machine reset needed after a hardware change, license lost.</div>
+        </div>
+        <div class="topic-item">
+          <span class="t-icon">✨</span>
+          <div><strong>Feature ideas</strong> — what would make Sahaj work better for your daily typing. Best ideas come from users.</div>
+        </div>
+        <div class="topic-item">
+          <span class="t-icon">💛</span>
+          <div><strong>Anything else</strong> — a question about pricing, a note about how the app helped, or just to say hi. All welcome.</div>
+        </div>
+        <div class="topic-item">
+          <span class="t-icon">🌐</span>
+          <div><strong>Live AI / translation</strong> — those features use third-party services. If they stop working, please understand that's outside my direct control — but tell me anyway.</div>
+        </div>
+        <div class="topic-item">
+          <span class="t-icon">💸</span>
+          <div><strong>Refunds</strong> — email within 7 days of purchase. Please don't open a dispute with the payment provider before reaching out to me first.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="/" class="logo"><div class="logo-mark">স</div>সহজ-Sahaj</a>
+        <p>A modern Assamese typing assistant with offline voice AI, phonetic typing, spell-check, dictionary, and translation — available for Windows and Ubuntu.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/#ways">4 Ways to Type</a></li>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#voice">Voice AI</a></li>
+          <li><a href="/#pricing">Buy Sahaj</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="/#credits">Credits</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> Nazmul Hussain. All rights reserved.</span>
+      <div class="socials">
+        <a href="https://www.facebook.com/nazmul.hussain.319" aria-label="Facebook" target="_blank" rel="noopener">FB</a>
+        <a href="mailto:hussainnazmul786@gmail.com" aria-label="Email">@</a>
+        <a href="#" aria-label="UPI" title="UPI: hussainnazmul786-2@okicici">₹</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('menu');
+  if (burger && menu) burger.addEventListener('click', function(){ menu.classList.toggle('open'); });
+
+  // ---- Contact form: inline submit with AJAX + nice success state ----
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      // Basic client-side validation
+      var email = contactForm.querySelector('[name="email"]');
+      var message = contactForm.querySelector('[name="message"]');
+      if (!email.value.trim() || !message.value.trim()) {
+        if (!email.value.trim()) email.focus();
+        else message.focus();
+        return;
+      }
+
+      var btn = contactForm.querySelector('button[type="submit"]');
+      var originalLabel = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = '⏳ Sending…';
+
+      try {
+        var res = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          // Replace the form with a friendly success card
+          contactForm.outerHTML = ''
+            + '<div class="form-success">'
+            +   '<span class="tick">✅</span>'
+            +   '<h3>Message sent — thank you!</h3>'
+            +   '<p>I\'ll get back to you within 1–2 days. 🙏<br/>If it\'s urgent, you can email me directly at '
+            +     '<a href="mailto:hussainnazmul786@gmail.com">hussainnazmul786@gmail.com</a>.</p>'
+            + '</div>';
+        } else {
+          btn.disabled = false;
+          btn.innerHTML = originalLabel;
+          alert('Something went wrong sending your message. Please email hussainnazmul786@gmail.com directly.');
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.innerHTML = originalLabel;
+        alert('Network error. Please check your connection, or email hussainnazmul786@gmail.com directly.');
+      }
+    });
+  }
+</script>
+</body>
+</html>
