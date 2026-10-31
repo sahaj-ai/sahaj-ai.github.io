@@ -130,6 +130,7 @@
     color:#fff;box-shadow:0 12px 30px -12px rgba(91,140,255,.85);
   }
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 18px 40px -14px rgba(91,140,255,1)}
+  .btn-primary:disabled{opacity:.65;cursor:not-allowed;transform:none;box-shadow:none}
   .btn-buy{
     background:var(--green); color:#fff; box-shadow:0 12px 30px -12px rgba(16,185,129,.85);
     font-size: 1rem; padding: 14px 28px;
@@ -401,6 +402,18 @@
       outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px rgba(59,130,246,.2);
   }
   .form-group textarea { min-height: 120px; }
+  .form-group input:disabled, .form-group textarea:disabled, .form-group select:disabled { opacity: .7; cursor: not-allowed; }
+
+  /* Success card that replaces the form after submission */
+  .form-success{
+    text-align:center;padding:40px 20px;animation:fadeIn .4s ease;
+  }
+  .form-success .tick{font-size:3rem;display:block;margin-bottom:14px;line-height:1}
+  .form-success h3{color:#6ee7b7;font-size:1.2rem;margin:0 0 8px;font-weight:700}
+  .form-success p{color:var(--muted);font-size:.95rem;margin:0;line-height:1.6}
+  .form-success a{color:#93c5fd;text-decoration:underline}
+  .form-success a:hover{text-decoration:underline}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
   /* Footer */
   footer{border-top:1px solid var(--line);padding:56px 0 34px;margin-top:20px}
@@ -843,26 +856,30 @@
       <p>Your feedback shapes the future of <span class="assamese">সহজ-Sahaj</span>.</p>
     </div>
     <div class="form-card">
-      <form action="https://formspree.io/f/xojgajql" method="POST">
+      <form id="suggestionForm" action="https://formspree.io/f/xojgajql" method="POST" novalidate>
+        <!-- Formspree hidden fields -->
+        <input type="hidden" name="_subject" value="New suggestion from সহজ-Sahaj website" />
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
         <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" name="name" placeholder="Enter your name" required />
+          <label for="sug-name">Your Name</label>
+          <input type="text" id="sug-name" name="name" placeholder="Enter your name" required autocomplete="name" />
         </div>
         <div class="form-group">
-          <label>Your Email (optional)</label>
-          <input type="email" name="email" placeholder="Enter your email" />
+          <label for="sug-email">Your Email (optional)</label>
+          <input type="email" id="sug-email" name="email" placeholder="Enter your email" autocomplete="email" />
         </div>
         <div class="form-group">
-          <label>Suggestion Type</label>
-          <select name="type">
+          <label for="sug-type">Suggestion Type</label>
+          <select id="sug-type" name="type">
             <option value="feature">New Feature Request</option>
             <option value="improvement">Improvement to Existing Feature</option>
             <option value="bug">Bug Report</option>
           </select>
         </div>
         <div class="form-group">
-          <label>Your Suggestion</label>
-          <textarea name="message" placeholder="Describe what you'd like to see..." required></textarea>
+          <label for="sug-message">Your Suggestion</label>
+          <textarea id="sug-message" name="message" placeholder="Describe what you'd like to see..." required></textarea>
         </div>
         <button type="submit" class="btn btn-primary" style="width: 100%;">📩 Submit Suggestion</button>
       </form>
@@ -899,7 +916,7 @@
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="#credits">Credits</a></li>
-          <li><a href="#suggestions">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div>
@@ -960,6 +977,52 @@
 
   // ---- year ----
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ---- Suggest a feature: inline submit with success state ----
+  var suggestionForm = document.getElementById('suggestionForm');
+  if (suggestionForm) {
+    suggestionForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      // Basic client-side check
+      var nameField = suggestionForm.querySelector('[name="name"]');
+      var messageField = suggestionForm.querySelector('[name="message"]');
+      if (!nameField.value.trim()) { nameField.focus(); return; }
+      if (!messageField.value.trim()) { messageField.focus(); return; }
+
+      var btn = suggestionForm.querySelector('button[type="submit"]');
+      var originalLabel = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = '⏳ Sending…';
+
+      try {
+        var res = await fetch(suggestionForm.action, {
+          method: 'POST',
+          body: new FormData(suggestionForm),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          // Replace the entire form with the friendly success card
+          suggestionForm.outerHTML = ''
+            + '<div class="form-success">'
+            +   '<span class="tick">✅</span>'
+            +   '<h3>Message sent — thank you!</h3>'
+            +   '<p>I\'ll get back to you within 1–2 days. 🙏<br/>If it\'s urgent, you can email me directly at '
+            +     '<a href="mailto:hussainnazmul786@gmail.com">hussainnazmul786@gmail.com</a>.</p>'
+            + '</div>';
+        } else {
+          btn.disabled = false;
+          btn.innerHTML = originalLabel;
+          alert('Something went wrong sending your message. Please email hussainnazmul786@gmail.com directly.');
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.innerHTML = originalLabel;
+        alert('Network error. Please check your connection, or email hussainnazmul786@gmail.com directly.');
+      }
+    });
+  }
 </script>
 </body>
 </html>
