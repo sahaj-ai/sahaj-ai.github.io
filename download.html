@@ -199,6 +199,15 @@
     border-radius:5px;padding:2px 7px;font-family:'JetBrains Mono',monospace;
     font-size:.82rem;color:#a5f3fc;
   }
+  .step-list .alternative{
+    display:block;margin-top:6px;padding:10px 12px;
+    background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.1);
+    border-radius:8px;font-size:.86rem;line-height:1.55;
+  }
+  .step-list .alt-label{
+    display:inline-block;font-size:.72rem;font-weight:700;
+    color:#fcd34d;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px;
+  }
 
   /* ---------- LICENSE REMINDER ---------- */
   section.license{
@@ -362,18 +371,17 @@
         <h3>Ubuntu</h3>
         <p class="dl-sub">One installer · works on <strong>22.04</strong>, <strong>24.04</strong>, and <strong>26.04</strong> LTS · 64-bit</p>
 
-        <div class="dl-size">📦 ~3.5 GB · AppImage</div>
+        <div class="dl-size">📦 ~3.5 GB · Package (.deb)</div>
 
         <!-- 🔽 REPLACE WITH YOUR ACTUAL UBUNTU DOWNLOAD LINK -->
-        <a href="https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/v1.1-x/Sahaj-Ubuntu.AppImage"
+        <a href="https://github.com/YOUR_USERNAME/YOUR_REPO/releases/download/v1.1-x/Sahaj-Ubuntu.deb"
            class="dl-btn dl-btn-ubuntu" download>
           ⬇️ &nbsp; Download for Ubuntu
         </a>
 
         <p class="dl-note">
-          <strong>Heads up:</strong> after downloading, you may need to make the file executable with
-          <code style="background:rgba(255,255,255,.06);border:1px solid var(--line);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#a5f3fc">chmod +x</code>
-          before running it.
+          <strong>Heads up:</strong> this is a standard <code style="background:rgba(255,255,255,.06);border:1px solid var(--line);padding:1px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#a5f3fc">.deb</code>
+          package — double-click it to install via Ubuntu Software or App Center. Full steps below.
         </p>
       </div>
 
@@ -405,10 +413,28 @@
       <div class="steps-card ubuntu">
         <h3><span class="os-dot"></span> Ubuntu install</h3>
         <ol class="step-list">
-          <li><span class="num">1</span><div>Download the <code>.AppImage</code> installer — one file works on Ubuntu 22.04, 24.04, and 26.04.</div></li>
-          <li><span class="num">2</span><div>Right-click the file → <strong>Properties</strong> → <strong>Permissions</strong> → tick <strong>Allow executing file as program</strong>.<br/>
-            (Or from a terminal: <code>chmod +x Sahaj-*.AppImage</code>)</div></li>
-          <li><span class="num">3</span><div>Double-click the file to launch Sahaj. If a "Trust and Launch" prompt appears, click <strong>Trust and Launch</strong>.</div></li>
+          <li><span class="num">1</span><div>Download the <code>.deb</code> installer — one file works on Ubuntu 22.04, 24.04, and 26.04.</div></li>
+          <li><span class="num">2</span>
+            <div>
+              Install the package. Pick whichever method you prefer:
+              <span class="alternative">
+                <span class="alt-label">🖱️ Easiest — using App Center</span>
+                <strong>Double-click</strong> the downloaded <code>.deb</code> file. It opens in
+                <strong>Ubuntu Software</strong> (22.04) or <strong>App Center</strong> (24.04 and 26.04),
+                showing the Sahaj icon and an <strong>Install</strong> button. Click it, enter your
+                password when asked, and wait a few seconds.
+              </span>
+              <span class="alternative">
+                <span class="alt-label">⌨️ Terminal method</span>
+                Open a terminal and run:<br/>
+                <code>sudo apt install ./Sahaj-3.0.0-amd64.deb</code><br/>
+                from the folder where you downloaded the file (usually <code>~/Downloads</code>). Using
+                <code>apt</code> rather than <code>dpkg</code> ensures any missing dependencies are installed
+                automatically.
+              </span>
+            </div>
+          </li>
+          <li><span class="num">3</span><div>Open <strong>সহজ-Sahaj</strong> from your Applications menu — it's now installed like any other app.</div></li>
           <li><span class="num">4</span><div>Paste your license key on the first launch — you're ready to type.</div></li>
         </ol>
       </div>
