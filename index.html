@@ -140,6 +140,19 @@
   .btn-ghost:hover{background:rgba(255,255,255,.09);transform:translateY(-2px)}
   .btn-sm{padding:9px 18px;font-size:.86rem}
 
+  /* Gentle pulsing glow for the primary buy button */
+  .btn-buy-pulse {
+    animation: buyPulse 2.4s ease-in-out infinite;
+  }
+  @keyframes buyPulse {
+    0%, 100% { box-shadow: 0 12px 30px -12px rgba(16,185,129,.85); }
+    50%      { box-shadow: 0 12px 40px -8px  rgba(16,185,129,1); }
+  }
+  .btn-buy-pulse:hover {
+    animation: none;
+    box-shadow: 0 18px 40px -14px rgba(16,185,129,1);
+  }
+
   /* ---------- NAV ---------- */
   header.nav{
     position:fixed;top:0;left:0;right:0;z-index:100;
@@ -740,10 +753,15 @@
         and helps keep the project alive. Thank you. ❤️
       </div>
 
-      <!-- Razorpay Button -->
-      <form style="margin: 20px 0;">
-        <script async src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_TCeA2of04WiNv9"> </script>
-      </form>
+      <!-- Razorpay Buy Button — styled to match the site theme -->
+      <a href="https://rzp.io/rzp/buy-sahaj-ai"
+         class="btn btn-buy btn-buy-pulse"
+         style="width: 100%; margin: 24px 0 8px; font-size: 1.05rem; padding: 16px 28px;">
+        🔒 Buy Now — ₹499
+      </a>
+      <p class="muted" style="font-size: 0.78rem; margin: 0 0 16px;">
+        Secure checkout via Razorpay · UPI · Cards · Netbanking · Wallets
+      </p>
 
       <p class="muted" style="font-size:.8rem;">
         After payment, your license key and download links for <b>both Windows and Ubuntu</b> will arrive by email — pick the one you need.
