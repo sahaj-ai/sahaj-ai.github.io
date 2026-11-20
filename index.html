@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- THIS META TAG FIXES THE YOUTUBE ERROR 153 -->
+<meta name="referrer" content="strict-origin-when-cross-origin" />
 <title>সহজ-Sahaj | AI-Powered Assamese Typing — Voice, Phonetic, Mouse & InScript</title>
 <meta name="description" content="Type Assamese four ways: with your voice, using English phonetics, clicking letters, or on a physical keyboard. Offline AI, spell-check, dictionary, translation — all in one app. Available for Windows and Ubuntu." />
 <meta name="keywords" content="Assamese typing tool, phonetic typing Assamese, Assamese keyboard, voice typing Assamese, Assamese speech to text, type Assamese online, সহজ Sahaj, Assamese spell checker, English to Assamese translation, Assamese dictionary, InScript Assamese, Nazmul Hussain" />
@@ -332,8 +334,52 @@
     color:#6ee7b7;display:grid;place-items:center;font-size:.75rem;font-weight:700;margin-top:2px;
   }
 
-  /* Preview */
+  /* Preview & Video Tutorials */
   .screenshot-img { border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); width: 100%; height: auto; }
+  
+  .video-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 16px;
+    transition: .28s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .video-card:hover {
+    transform: translateY(-5px);
+    border-color: #2e3d61;
+    background: var(--card-2);
+    box-shadow: 0 16px 40px -12px rgba(0,0,0,0.6);
+  }
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255,255,255,.05);
+  }
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .video-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+  .video-info p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
 
   /* Steps */
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:900px;margin:0 auto}
@@ -495,7 +541,7 @@
       <a href="#ways">4 Ways to Type</a>
       <a href="#features">Features</a>
       <a href="#voice">Voice AI</a>
-      <a href="#preview">Preview</a>
+      <a href="#tutorials">Tutorials</a>
       <a href="#pricing">Pricing</a>
       <div class="dropdown">
         <a href="#pages">Pages <span class="caret">▼</span></a>
@@ -722,8 +768,51 @@
   </div>
 </section>
 
+<!-- ================= VIDEO TUTORIALS ================= -->
+<section id="tutorials" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow pink">Watch & Learn</span>
+      <h2>Master Sahaj in minutes.</h2>
+      <p>Straight from the developer. A quick, friendly walkthrough to get you typing effortlessly.</p>
+    </div>
+    
+    <div class="grid-2" style="gap: 30px; max-width: 960px; margin: 0 auto;">
+      
+      <!-- Video 1 -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube-nocookie.com/embed/ekLRel5U_kI?si=hl-9_qKuuksKsnbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Part 1 — Install &amp; Activate</h3>
+          <p>From purchase to your first launch. We walk through downloading, running the installer, and pasting your license key.</p>
+        </div>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-card">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube-nocookie.com/embed/VwOZN2Hrp9U?si=AtIzGqJJEqKbVD_O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="video-info">
+          <h3>Part 2 — The Complete Guide</h3>
+          <p>Master the app. We explore all four typing modes, the built-in dictionary, spell-check, and custom helper buttons.</p>
+        </div>
+      </div>
+
+    </div>
+    
+    <div style="text-align: center; margin-top: 36px;">
+      <a href="https://www.youtube.com/playlist?list=PLZOT1kM9mGKY" target="_blank" rel="noopener" class="btn btn-ghost">
+        ▶ Watch the full playlist on YouTube
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ================= PRICING ================= -->
-<section id="pricing" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section id="pricing">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow green">One-time Price</span>
@@ -774,7 +863,7 @@
 </section>
 
 <!-- ================= HOW TO GET STARTED ================= -->
-<section id="start">
+<section id="start" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Get Started</span>
@@ -801,7 +890,7 @@
 </section>
 
 <!-- ================= CREDITS ================= -->
-<section id="credits" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section id="credits">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Gratitude</span>
@@ -826,7 +915,7 @@
 </section>
 
 <!-- ================= FAQ ================= -->
-<section id="faq">
+<section id="faq" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">FAQ</span>
@@ -866,7 +955,7 @@
 </section>
 
 <!-- ================= SUGGESTIONS ================= -->
-<section id="suggestions" style="background:var(--bg-soft);border-top:1px solid var(--line);">
+<section id="suggestions">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Help Improve</span>
@@ -925,6 +1014,7 @@
           <li><a href="#ways">4 Ways to Type</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#voice">Voice AI</a></li>
+          <li><a href="#tutorials">Tutorials</a></li>
           <li><a href="#pricing">Buy Sahaj</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
